@@ -138,8 +138,8 @@ export default function EditInvoiceForm({
         </fieldset>
         <div id="status-error" aria-live="polite" aria-atomic="true">
                 { state.errors?.status &&
-                    state.errors.status.map((error: string) => (
-                      <p className="mt-2 text-sm text-red-500">
+                    state.errors.status.map((error: string, index: number) => (
+                      <p key={index} className="mt-2 text-sm text-red-500">
                         {error}
                       </p>
                     ))
